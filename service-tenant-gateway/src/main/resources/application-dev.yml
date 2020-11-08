@@ -1,0 +1,19 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+mybatis:
+  #config-locations: classpath:mybatis-config.xml
+  mapper-locations: classpath*:com/zxt/gateway/database/mysql/*Mapper.xml
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/enough?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: lidong123
+
+tenantId: SYSTEM
+logging:
+  level:
+    com.zxt: DEBUG

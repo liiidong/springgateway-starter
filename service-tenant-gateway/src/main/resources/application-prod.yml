@@ -1,0 +1,23 @@
+server:
+  port: 8080
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.supermap.pub/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+gaf:
+  datasource:
+    enable: true
+    dbType: MYSQL
+    dbName: gaf
+    server: 192.168.192.232
+    port: 30194
+    username: admin
+    password: 123456
+    mapperLocations: classpath*:com/supermap/gaf/**/{TYPE}/*Mapper.xml
+#shiro配置
+shiro:
+  serviceUrl: http://gaf.supermap.pub/manager
+  successUrl: http://gaf.supermap.pub/index.html

@@ -1,0 +1,14 @@
+server:
+  port: 8769
+spring:
+  application:
+    name: ADMIN-SERVER
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#turbine:
+#  app-config: DEMO-SERVICE1,DEMO-SERVICE2,TENANT-GAF-GATEWAY
+#  cluster-name-expression: new String("default")
+
